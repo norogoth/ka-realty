@@ -56,14 +56,18 @@ const HeroItems = styled.div`
 
 `
 const HeroH1 = styled.h2`
-    font-size: clamp(1.2rem, 6vw, 3rem);
+    font-size: clamp(1.2rem, 7vw, 5rem);
 `
 
 const HeroSubtitle = styled.p`
     font-size: clamp(1rem, 3vw, 2rem);
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 `
 
 const HeroButtons = styled.div`
-    
+   display: flex; 
+
+   @media screen and (max-width: 800px) {
+       flex-direction: column;
+   }
 `
