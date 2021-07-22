@@ -9,8 +9,7 @@ import Hero from "../components/hero"
 
 const IndexPage = () => (
   <Layout>
-    <Hero />
-    <p>it works</p>
+    <Hero/>
   </Layout>
 )
 
