@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
-import { GlobalStyle } from '../styles/global'
 
 export const Button = styled(Link)`
     background: ${({neutral}) => (neutral? "black" : "var(--secondary-color)")};

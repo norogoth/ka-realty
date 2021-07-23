@@ -26,7 +26,7 @@ const Hero = () => {
 export default Hero
 
 const HeroContainer = styled.div`
-    height: 100vh;
+    height: 90vh;
 `
 const VideoBg = styled.video`
     width: 100%;
