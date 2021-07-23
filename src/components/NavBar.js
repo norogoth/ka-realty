@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const NavBar = (props) => {
     
-
-    console.log("NavBar is working???");
 
     const data = useStaticQuery(graphql`
         query NavBarQuery {
@@ -30,41 +30,36 @@ const NavBar = (props) => {
     `)
     
     const buyNavData = data.allBuyNavJson.edges;
-
     const sellNavData = data.allSellNavJson.edges;
-
-    console.log("buyNavData: ", buyNavData);
-    console.log("sellNavData: ", sellNavData);
-
-    const BuyNavBar = () => {
-
+    
+    const stringToObj = {
+        "buy":buyNavData,
+        "sell":sellNavData
     }
 
-    const SellNavBar = () => {
-        
+    function generateChildren(buyOrSellString){
+        const navData = stringToObj[buyOrSellString];
+        return navData.map((item, index) => {
+            return <Link to={item.node.link} key={item.node.id}>{item.node.name}</Link>
+            console.log("link: ",item.node.link, "name: ",item.node.name);
+        })
     }
+    
 
-    if (props.buyOrSell === "buy"){
-        return (
-            <div>
-                <p>We buyin.</p>
-            </div>
-        )
-    }
-    else if (props.buyOrSell === "sell"){
-        return (
-            <div>
-                <p>We Sellin.</p>
-            </div>
-        )
-    }
-    else {
-        console.log("props.buyOrSell: ",props.buyOrSell)
-        return (
-            <p>uh oh . . . we made and error.</p>
-        )
-    }
+    //console.log("buyNavData: ", buyNavData);
+    //console.log("sellNavData: ", sellNavData);
+    console.log("function return: ",generateChildren(props.buyOrSell))
+
+    return (
+        <Navigation>
+            {generateChildren(props.buyOrSell)}
+        </Navigation>
+    )
 
 }
 
 export default NavBar
+
+const Navigation = styled.div`
+
+`
