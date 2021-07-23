@@ -11,7 +11,7 @@ const Hero = () => {
             </HeroBg>
             <HeroContent>
                <HeroItems>
-                   <HeroH1>Karen Aaker</HeroH1>
+                   <HeroH1>Realtor Name</HeroH1>
                    <HeroSubtitle>Helping you find your dream home.</HeroSubtitle>
                    <HeroButtons>
                        <Button state={{links:"buy"}} primary to="/buy/buy">I want to Buy</Button>
