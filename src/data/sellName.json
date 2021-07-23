@@ -1,0 +1,26 @@
+[
+    {
+        "name": "My Home's Value",
+        "link": "/get_value"
+    },
+    {
+        "name": "Seller's Roadmap",
+        "link": "/seller_roadmap"
+    },
+    {
+        "name": "Monthly Housing Report",
+        "link": "/monthly_housing_report"
+    },
+    {
+        "name": "Guide to Title and Escrow",
+        "link": "guide_to_title_and_escrow"
+    },
+    {
+        "name": "How to get my House Ready to Sell",
+        "link": "/prepare_house"
+    },
+    {
+        "name": "Learn More",
+        "link": "/"
+    }
+]
