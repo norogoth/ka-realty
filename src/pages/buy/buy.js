@@ -5,8 +5,7 @@ const Buy = ({location}) => {
     console.log("name: ",location.state);
 
     return (
-        <MainLayout>
-            <p>buy works</p>
+        <MainLayout buyOrSell="buy">
         </MainLayout>
     )
 }

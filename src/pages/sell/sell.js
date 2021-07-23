@@ -3,9 +3,8 @@ import MainLayout from '../../components/mainLayout'
 
 const Sell = () => {
     return (
-        <div>
-            Sell works.
-        </div>
+        <MainLayout buyOrSell="sell">
+        </MainLayout>
     )
 }
 
