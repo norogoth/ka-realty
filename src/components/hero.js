@@ -14,8 +14,8 @@ const Hero = () => {
                    <HeroH1>Karen Aaker</HeroH1>
                    <HeroSubtitle>Helping you find your dream home.</HeroSubtitle>
                    <HeroButtons>
-                       <Button primary to="/buy">I want to Buy</Button>
-                       <Button primary to="/sell">I want to Sell</Button>
+                       <Button state={{links:"buy"}} primary to="/buy/buy">I want to Buy</Button>
+                       <Button state={{links:"sell"}} primary to="/sell/sell">I want to Sell</Button>
                    </HeroButtons>
                 </HeroItems> 
             </HeroContent>
@@ -56,11 +56,11 @@ const HeroItems = styled.div`
 
 `
 const HeroH1 = styled.h2`
-    font-size: clamp(1.2rem, 7vw, 5rem);
+    font-size: clamp(3rem, 7vw, 5rem);
 `
 
 const HeroSubtitle = styled.p`
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     margin-bottom: 2rem;
 `
 
