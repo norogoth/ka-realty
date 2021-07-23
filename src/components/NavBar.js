@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Link } from 'gatsby';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
+import { GlobalStyle } from '../styles/global';
 
 const NavBar = (props) => {
     
@@ -52,6 +53,7 @@ const NavBar = (props) => {
 
     return (
         <Navigation>
+        <GlobalStyle/>
             {generateChildren(props.buyOrSell)}
         </Navigation>
     )
@@ -61,5 +63,7 @@ const NavBar = (props) => {
 export default NavBar
 
 const Navigation = styled.div`
-
+    background: ${"var(--secondary-color)"};
+    display: flex;
+    flex-direction: column;
 `

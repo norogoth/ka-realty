@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import NavBar from './NavBar'
 import Header from './header'
 import styled from "styled-components"
+import Footer from './Footer'
 
 import { GlobalStyle } from "../styles/global"
 
@@ -16,9 +17,11 @@ const MainLayout = (props, {children}) => {
             <NavAndMain>
                 <NavBar buyOrSell={props.buyOrSell}/>
                 <MainContent>
+                    <p>main content area</p>
                     {children}
                 </MainContent>
             </NavAndMain>
+            <Footer/>
         </>
     )
 }
@@ -26,8 +29,10 @@ const MainLayout = (props, {children}) => {
 export default MainLayout;
 
 const NavAndMain = styled.div`
-
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    min-height:90vh;
 `
 const MainContent = styled.div`
-
+    background: gray;
 `
