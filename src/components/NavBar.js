@@ -41,7 +41,7 @@ const NavBar = (props) => {
     function generateChildren(buyOrSellString){
         const navData = stringToObj[buyOrSellString];
         return navData.map((item, index) => {
-            return <Link to={item.node.link} key={item.node.id}>{item.node.name}</Link>
+            return <NavLink className="foo" to={item.node.link} key={item.node.id}>{item.node.name}</NavLink>
             console.log("link: ",item.node.link, "name: ",item.node.name);
         })
     }
@@ -66,4 +66,13 @@ const Navigation = styled.div`
     background: ${"var(--secondary-color)"};
     display: flex;
     flex-direction: column;
+`
+const NavLink = styled(Link)`
+    color: black;
+    text-decoration: none;
+    padding: .5rem;
+
+    &:hover {
+        background: ${"var(--secondary-highlight)"};
+    }
 `

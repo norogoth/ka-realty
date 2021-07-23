@@ -30,7 +30,7 @@ export default MainLayout;
 
 const NavAndMain = styled.div`
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 200px 1fr;
     min-height:90vh;
 `
 const MainContent = styled.div`
