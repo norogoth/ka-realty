@@ -71,6 +71,7 @@ const NavLink = styled(Link)`
     color: black;
     text-decoration: none;
     padding: .5rem;
+    font-family: "quicksand bold";
 
     &:hover {
         background: ${"var(--secondary-highlight)"};

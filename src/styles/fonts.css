@@ -1,0 +1,20 @@
+
+    @font-face {
+        font-family: "champagne_bold";
+        src: url("../fonts/Champagne_bold.ttf");
+    }
+
+    @font-face {
+        font-family: "champagne";
+        src: url("../fonts/Champagne.ttf");
+    }
+
+    @font-face {
+        font-family: "quicksand";
+        src: url("../fonts/Quicksand_Book.otf");
+    }
+
+    @font-face {
+        font-family: "quicksand bold";
+        src: url("../fonts/Quicksand_Bold.otf");
+    }
