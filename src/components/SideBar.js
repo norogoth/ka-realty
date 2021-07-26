@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styled, { withTheme } from 'styled-components';
 import { GlobalStyle } from '../styles/global';
 
-const NavBar = (props) => {
+const SideBar = (props) => {
     
 
     const data = useStaticQuery(graphql`
@@ -53,14 +53,14 @@ const NavBar = (props) => {
 
     return (
         <Navigation>
-        <GlobalStyle/>
+            <GlobalStyle/>
             {generateChildren(props.buyOrSell)}
         </Navigation>
     )
 
 }
 
-export default NavBar
+export default SideBar
 
 const Navigation = styled.div`
     background: ${"var(--secondary-color)"};
@@ -71,7 +71,7 @@ const NavLink = styled(Link)`
     color: black;
     text-decoration: none;
     padding: .5rem;
-    font-family: "quicksand bold";
+    font-family: "quicksand";
 
     &:hover {
         background: ${"var(--secondary-highlight)"};

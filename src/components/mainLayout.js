@@ -1,7 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import NavBar from './NavBar'
+import SideBar from './SideBar'
 import Header from './header'
 import styled from "styled-components"
 import Footer from './Footer'
@@ -13,12 +13,11 @@ const MainLayout = (props, {children}) => {
     return (
         <>
             <GlobalStyle/>
-            <Header/>
+            <Header buyOrSell={props.buyOrSell}/>
             <NavAndMain>
-                <NavBar buyOrSell={props.buyOrSell}/>
+                <SideBar buyOrSell={props.buyOrSell}/>
                 <MainContent>
                     <p>main content area</p>
-                    {children}
                 </MainContent>
             </NavAndMain>
             <Footer/>

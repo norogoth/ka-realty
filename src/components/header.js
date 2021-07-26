@@ -3,19 +3,22 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { GlobalStyle } from "../styles/global"
 
-const Header = ({ siteTitle }) => (
+
+const Header = (props,{ siteTitle }) => (
   <HeaderDiv>
     <GlobalStyle />
-    <SiteHeading>KA Realty</SiteHeading>
-    <CurrentStatus>Status</CurrentStatus>
+    <SiteHeading to="/">KA Realty</SiteHeading>
+    <CurrentStatus>Information on {props.buyOrSell}ing</CurrentStatus>
     <Links>
-      <HeaderLink>About</HeaderLink>
-      <HeaderLink>I want to x</HeaderLink>
+      <HeaderLink to="/other/about">About</HeaderLink>
+      <HeaderLink to={"/"+props.buyOrSell === "buy" ? "sell" : "buy"+"/main"}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
     </Links>
   </HeaderDiv>
 )
 
 export default Header
+
+const headerFont = "champagne";
 
 const HeaderDiv = styled.div`
   display: flex;
@@ -27,25 +30,30 @@ const HeaderDiv = styled.div`
   padding: .3rem;
 `
 
-const SiteHeading = styled.h2`
+const SiteHeading = styled(Link)`
   overflow: auto;
-  font-family: "champagne_bold";
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-family: ${headerFont};
+  margin-left: .5rem;
 `
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
   width: 30vw;
   margin: 0 1rem;
+  max-width: 200px;
 `
 const CurrentStatus = styled.label`
-  font-family: "champagne_bold";
+  font-family: ${headerFont};
 `
 const HeaderLink = styled(Link)`
   text-decoration: none;
   color: white;
   text-align: center;
   height: 100%;
-  font-family: "champagne_bold";
+  font-family: ${headerFont};
 
   &:hover {
 
