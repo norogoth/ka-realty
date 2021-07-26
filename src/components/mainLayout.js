@@ -9,13 +9,13 @@ import Footer from './Footer'
 import { GlobalStyle } from "../styles/global"
 
 const MainLayout = (props, {children}) => {
-
+/*
     if (props.children){
         props.children.forEach ((child, index) => {
             console.log("child: ",child);
         })
     }
-
+*/
 
     return (
         <MainLayoutDiv>
