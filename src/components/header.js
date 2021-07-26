@@ -11,7 +11,7 @@ const Header = (props,{ siteTitle }) => (
     <CurrentStatus>Information on {props.buyOrSell}ing</CurrentStatus>
     <Links>
       <HeaderLink to="/other/about">About</HeaderLink>
-      <HeaderLink to={"/"+props.buyOrSell === "buy" ? "sell" : "buy"+"/main"}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
+      <HeaderLink to={"/" + props.buyOrSell === "buy" ? "sell" : "buy"+"/main"}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
     </Links>
   </HeaderDiv>
 )
@@ -47,6 +47,7 @@ const Links = styled.div`
 `
 const CurrentStatus = styled.label`
   font-family: ${headerFont};
+  font-size: 1.5rem;
 `
 const HeaderLink = styled(Link)`
   text-decoration: none;
