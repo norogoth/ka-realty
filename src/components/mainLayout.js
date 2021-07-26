@@ -10,6 +10,13 @@ import { GlobalStyle } from "../styles/global"
 
 const MainLayout = (props, {children}) => {
 
+    if (props.children){
+        props.children.forEach ((child, index) => {
+            console.log("child: ",child);
+        })
+    }
+
+
     return (
         <MainLayoutDiv>
             <GlobalStyle/>
@@ -18,7 +25,7 @@ const MainLayout = (props, {children}) => {
                 <SideBar buyOrSell={props.buyOrSell}/>
                 <MainContent>
                     <p>main content area</p>
-                    {children}
+                    {props.children}
                 </MainContent>
             </NavAndMain>
             <Footer/>
