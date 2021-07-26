@@ -24,7 +24,6 @@ const MainLayout = (props, {children}) => {
             <NavAndMain>
                 <SideBar buyOrSell={props.buyOrSell}/>
                 <MainContent>
-                    <p>main content area</p>
                     {props.children}
                 </MainContent>
             </NavAndMain>

@@ -42,16 +42,13 @@ const SideBar = (props) => {
         const navData = stringToObj[buyOrSellString];
         return navData.map((item, index) => {
             const myLink = "/" + buyOrSellString + item.node.link;
-            console.log("myLink: ",myLink);
             return <NavLink className="foo" to={myLink} key={item.node.id}>{item.node.name}</NavLink>
-            console.log("link: ",item.node.link, "name: ",item.node.name);
         })
     }
     
 
     //console.log("buyNavData: ", buyNavData);
     //console.log("sellNavData: ", sellNavData);
-    console.log("function return: ",generateChildren(props.buyOrSell))
 
     return (
         <Navigation>
