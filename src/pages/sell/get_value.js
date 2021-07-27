@@ -10,14 +10,18 @@ const Get_value = () => {
     console.log("get value should be rendering right now so uh.");
     return (
         <MainLayout buyOrSell="sell" method="POST" data-netlify="true">
-            <ValueHeading>My Home's Value</ValueHeading>
-            <Description></Description>
-            <InputDiv name="home value" netlify>
-                <Input name="address" placeholder="address"/>
-                <Input name="email" placeholder="email"/>
-                <Input name="name" placeholder="name"/>
-                <SubmitButton onClick={() => clickSubmit()}>Submit</SubmitButton>
-            </InputDiv>
+            <ContentDiv>
+                <Content>
+                    <ValueHeading>My Home's Value</ValueHeading>
+                    <Description>Enter your address, email and name and I will find your home's value for you!</Description>
+                    <InputDiv name="home value" netlify>
+                        <Input name="address" placeholder="address"/>
+                        <Input name="email" placeholder="email"/>
+                        <Input name="name" placeholder="name"/>
+                        <SubmitButton onClick={() => clickSubmit()}>Submit</SubmitButton>
+                    </InputDiv>
+                </Content>
+            </ContentDiv>
         </MainLayout>
     )
 }
@@ -27,9 +31,11 @@ export default Get_value
 const maxInputWidth = "20rem";
 
 const Description = styled.p`
-
+    color: white;
+    padding: 1rem;
 `
 const ValueHeading = styled.div`
+    margin-top: 1rem;
     color: white;
     font-size: clamp(1.2rem, 5vw, 2rem);
     text-align: center;
@@ -61,4 +67,21 @@ const SubmitButton = styled.button`
     &:hover {
         background: ${({neutral}) => (neutral? "white" : "var(--secondary-highlight)")}
     }
+`
+const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: darkgray;
+    border-radius: 1.5rem;
+    width: 30%;
+    min-width: 300px;
+   min-height: 400px;
+`
+const ContentDiv = styled.div`
+    background-image: url("../../assets/images/blurred_home.jpg");
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
 `

@@ -2,12 +2,12 @@ import React from 'react'
 import MainLayout from '../../components/mainLayout'
 import PdfViewer from '../../components/pdfViewer'
 
-const Seller_roadmap = () => {
+const Monthly_housing_report = () => {
     return (
         <MainLayout buyOrSell="sell">
-            <PdfViewer filePath="https://www.docdroid.net/qPj5CCc/srm-pdf"/>
+            <PdfViewer filePath="https://docdro.id/n43ryOO"/>
         </MainLayout>
     )
 }
 
-export default Seller_roadmap
+export default Monthly_housing_report
