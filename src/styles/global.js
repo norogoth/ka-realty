@@ -11,4 +11,17 @@ export const GlobalStyle = createGlobalStyle`
    * {
        font-family: 'Roboto', sans-serif;
    }
+
+   .headerImage {
+       width: 20%;
+       min-width: 150px;
+       border-radius: .5rem;
+   }
+
+   .heroButton {
+    @media screen and (max-width: 800px) {
+        width: 40%;
+        min-width: 180px;
+    }
+   }
 `
