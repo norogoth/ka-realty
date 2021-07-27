@@ -6,7 +6,7 @@ const TitleAndEscrow = () => {
     return (
         <div>
             <MainLayout buyOrSell="sell">
-                <PdfViewer filePath="/LT_Guide_to_title_and_escrow.pdf"/>
+                <PdfViewer filePath={'/LT_Guide_to_title_and_escrow.pdf'}/>
             </MainLayout>
         </div>
     )

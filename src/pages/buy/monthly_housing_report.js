@@ -5,7 +5,7 @@ import PdfViewer from '../../components/pdfViewer'
 const Monthly_housing_report = () => {
     return (
         <MainLayout buyOrSell="buy">
-            <PdfViewer filePath="/housing_report.pdf"/>
+            <PdfViewer filePath={'/housing_report.pdf'}/>
         </MainLayout>
     )
 }
