@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Button } from '../components/Button'
 import Video from '../assets/videos/droneHome.mp4'
 import { StaticImage } from 'gatsby-plugin-image'
+import Footer from './Footer'
 
 const Hero = () => {
     return (
@@ -21,6 +22,7 @@ const Hero = () => {
                    </HeroButtons>
                 </HeroItems> 
             </HeroContent>
+            <Footer/>
         </HeroContainer>
     )
 }
@@ -31,7 +33,7 @@ const HeaderImage = styled(StaticImage)`
 `
 
 const HeroContainer = styled.div`
-    height: 90vh;
+    height: 100vh;
 `
 const VideoBg = styled.video`
     width: 100%;

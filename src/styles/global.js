@@ -19,9 +19,17 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    .heroButton {
-    @media screen and (max-width: 800px) {
-        width: 40%;
-        min-width: 180px;
+        @media screen and (max-width: 800px) {
+            width: 40%;
+            min-width: 180px;
+        }
     }
+    
+    .footerImg {
+        height: 100px;
+   }
+
+   .divOfInfo{
+       margin: 1rem;
    }
 `

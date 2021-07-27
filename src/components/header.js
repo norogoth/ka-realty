@@ -3,12 +3,30 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { GlobalStyle } from "../styles/global"
 
+function getSiteHeadingString(props) {
+  const siteStatus = props.buyOrSell;
+  let siteHeadingString = "";
+  switch (siteStatus) {
+    case "buy":
+      siteHeadingString = "Info on Buying";
+      break;
+    case "sell":
+      siteHeadingString = "Info on Selling.";
+      break;
+    case "about":
+      siteHeadingString = "About";
+      break;
+    default:
+      siteHeadingString = "error: undefined."
+  }
+  return siteHeadingString;
+}
 
 const Header = (props,{ siteTitle }) => (
   <HeaderDiv>
     <GlobalStyle />
     <SiteHeading to="/">KA Realty</SiteHeading>
-    <CurrentStatus>Information on {props.buyOrSell}ing</CurrentStatus>
+    <CurrentStatus>{getSiteHeadingString(props)}</CurrentStatus>
     <Links>
       <HeaderLink to="/other/about">About</HeaderLink>
       <HeaderLink to={"/" + props.buyOrSell === "buy" ? "sell" : "buy"+"/main"}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>

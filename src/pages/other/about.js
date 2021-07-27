@@ -1,13 +1,18 @@
 import React from 'react'
 import Header from '../../components/header'
+import styled from 'styled-components'
 
 const About = () => {
     return (
-        <div>
-           <Header/>
-           <p>it werks.</p> 
-        </div>
+        <AboutDiv>
+            <Header buyOrSell="about"/>
+            <p>about works</p>
+        </AboutDiv>
     )
 }
 
 export default About
+
+const AboutDiv = styled.div`
+
+`
