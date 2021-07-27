@@ -1,14 +1,12 @@
 import React from 'react'
 import MainLayout from '../../components/mainLayout'
 
-const Buy = ({location}) => {
-    console.log("name: ",location.state);
-
+const How_to_search = () => {
     return (
         <MainLayout buyOrSell="buy">
-            <p>main works</p>
+            <p>it works</p>
         </MainLayout>
     )
 }
 
-export default Buy
+export default How_to_search

@@ -16,8 +16,8 @@ const Hero = () => {
                    <StaticImage src="../assets/images/headshot_w_bg.jpg" className="headerImage"/>
                    <HeroSubtitle>Helping you find your dream home.</HeroSubtitle>
                    <HeroButtons>
-                       <Button className="heroButton" state={{links:"buy"}} primary to="/buy/main">I want to Buy</Button>
                        <Button className="heroButton" state={{links:"sell"}} primary to="/sell/main">I want to Sell</Button>
+                       <Button className="heroButton" state={{links:"buy"}} primary to="/buy/main">I want to Buy</Button>
                    </HeroButtons>
                 </HeroItems> 
             </HeroContent>
