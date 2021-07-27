@@ -18,5 +18,9 @@
     {
         "name": "Learn More",
         "link": "/main"
+    },
+    {
+        "name": "Lending",
+        "link": "/lending"
     }
 ]

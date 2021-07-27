@@ -14,7 +14,7 @@ const Footer = () => {
                     <Info>DRE#01988823</Info>
                 </Credentials> 
                 <Contact className="divOfInfo">
-                    <Info>(909)951-5048</Info>
+                    <Info>(951)500-0048</Info>
                     <Info>aakerkaren@gmail.com</Info>
                 </Contact>
             </FooterContent>

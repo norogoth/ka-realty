@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    .headerImage {
-       width: 20%;
+       width: 17%;
        min-width: 150px;
        border-radius: .5rem;
    }
@@ -32,4 +32,5 @@ export const GlobalStyle = createGlobalStyle`
    .divOfInfo{
        margin: 1rem;
    }
+   
 `

@@ -11,7 +11,7 @@ function getSiteHeadingString(props) {
       siteHeadingString = "Info on Buying";
       break;
     case "sell":
-      siteHeadingString = "Info on Selling.";
+      siteHeadingString = "Info on Selling";
       break;
     case "about":
       siteHeadingString = "About";
@@ -22,6 +22,11 @@ function getSiteHeadingString(props) {
   return siteHeadingString;
 }
 
+function getLink(props) {
+  const buyOrSell = props.buyOrSell;
+  return props.buyOrSell === "buy" ? "sell/main" : "buy/main";
+}
+
 const Header = (props,{ siteTitle }) => (
   <HeaderDiv>
     <GlobalStyle />
@@ -29,7 +34,7 @@ const Header = (props,{ siteTitle }) => (
     <CurrentStatus>{getSiteHeadingString(props)}</CurrentStatus>
     <Links>
       <HeaderLink to="/other/about">About</HeaderLink>
-      <HeaderLink to={"/" + props.buyOrSell === "buy" ? "sell" : "buy"+"/main"}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
+      <HeaderLink to={"/" + getLink(props)}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
     </Links>
   </HeaderDiv>
 )
@@ -59,6 +64,8 @@ const SiteHeading = styled(Link)`
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
+  align-content: center;
+  text-align: center;
   width: 30vw;
   margin: 0 1rem;
   max-width: 200px;
@@ -68,11 +75,16 @@ const CurrentStatus = styled.label`
   font-size: 1.5rem;
 `
 const HeaderLink = styled(Link)`
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: white;
+  color:black;
   text-align: center;
   height: 100%;
   font-family: ${headerFont};
+  background-color: ${'var(--secondary-color)'};
+  border-radius: .5rem;
+  padding: .5rem;
 
   &:hover {
 
