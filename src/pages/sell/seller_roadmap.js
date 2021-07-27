@@ -5,7 +5,7 @@ import PdfViewer from '../../components/pdfViewer'
 const Seller_roadmap = () => {
     return (
         <MainLayout buyOrSell="sell">
-            <PdfViewer filePath="https://www.docdroid.net/qPj5CCc/srm-pdf"/>
+            <PdfViewer filePath="/seller's roadmap.pdf"/>
         </MainLayout>
     )
 }

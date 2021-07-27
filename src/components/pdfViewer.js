@@ -3,6 +3,7 @@ import MainLayout from './mainLayout'
 
 const PdfViewer = (props) => {
     return (
+        /*
         <object
             data={props.filePath}
             type="application/pdf"
@@ -19,6 +20,8 @@ const PdfViewer = (props) => {
             </iframe>
 
         </object>
+        */
+       <embed src={props.filePath} width="100%" height="100%"/>
     )
 }
 
