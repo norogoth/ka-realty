@@ -1,7 +1,7 @@
 import React from 'react'
 import MainLayout from '../../components/mainLayout'
 
-const Sell = () => {
+const Prepare_house = () => {
     return (
         <MainLayout buyOrSell="sell">
             <p>This section is pending.</p>
@@ -9,4 +9,4 @@ const Sell = () => {
     )
 }
 
-export default Sell
+export default Prepare_house
