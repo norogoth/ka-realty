@@ -16,9 +16,12 @@ const MainLayout = (props, {children}) => {
         })
     }
 */
+const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
+
 React.useEffect(() => {
     window.addEventListener("resize", () => {
         getSideBar();
+        setScreenWidth(window.innerwidth);
         console.log("width is ",window.innerwidth);
     })
 }, [])
@@ -37,7 +40,7 @@ function getSideBar() {
         <MainLayoutDiv>
             <GlobalStyle/>
             <Header buyOrSell={props.buyOrSell}/>
-            <NavAndMain className="navAndMain">
+            <NavAndMain className="navAndMain" screenWidth={screenWidth}>
                 {getSideBar()}
                 <MainContent>
                     {props.children}
@@ -61,7 +64,14 @@ const NavAndMain = styled.div`
     display: grid;
     grid-template-columns: 200px 1fr;
     flex-grow: 1;
+
+    @media screen and (max-width: 650px){
+        display:flex;
+    }
 `
 const MainContent = styled.div`
     background: gray;
+    @media screen and (max-width: 650px){
+        width: 100%;
+    }
 `

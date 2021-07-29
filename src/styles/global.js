@@ -58,8 +58,5 @@ export const GlobalStyle = createGlobalStyle`
    }
 
     @media screen and (max-width:650){
-        .navAndMain {
-            grid-template-columns: 5px 1fr;
-        }
     }
 `
