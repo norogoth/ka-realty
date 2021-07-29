@@ -16,13 +16,29 @@ const MainLayout = (props, {children}) => {
         })
     }
 */
+React.useEffect(() => {
+    window.addEventListener("resize", () => {
+        getSideBar();
+        console.log("width is ",window.innerwidth);
+    })
+}, [])
+
+function getSideBar() {
+    const width = window.innerWidth;
+    if (width <= 650){
+        return null;
+    }
+    else {
+        return <SideBar buyOrSell={props.buyOrSell}/>
+    }
+}
 
     return (
         <MainLayoutDiv>
             <GlobalStyle/>
             <Header buyOrSell={props.buyOrSell}/>
-            <NavAndMain>
-                <SideBar buyOrSell={props.buyOrSell}/>
+            <NavAndMain className="navAndMain">
+                {getSideBar()}
                 <MainContent>
                     {props.children}
                 </MainContent>

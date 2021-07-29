@@ -51,7 +51,7 @@ const SideBar = (props) => {
     //console.log("sellNavData: ", sellNavData);
 
     return (
-        <Navigation>
+        <Navigation className="sidebar">
             <GlobalStyle/>
             {generateChildren(props.buyOrSell)}
         </Navigation>
@@ -65,6 +65,10 @@ const Navigation = styled.div`
     background: ${"var(--secondary-color)"};
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 900px){
+        visibility: hidden;
+    }
 `
 const NavLink = styled(Link)`
     color: black;

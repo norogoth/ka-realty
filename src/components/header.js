@@ -16,6 +16,9 @@ function getSiteHeadingString(props) {
     case "about":
       siteHeadingString = "About";
       break;
+      case "contact":
+        siteHeadingString = "Contact Me"
+        break;
     default:
       siteHeadingString = "error: undefined."
   }
@@ -33,7 +36,8 @@ const Header = (props,{ siteTitle }) => (
     <SiteHeading to="/">KA Realty</SiteHeading>
     <CurrentStatus>{getSiteHeadingString(props)}</CurrentStatus>
     <Links>
-      <HeaderLink to="/other/about">About</HeaderLink>
+      <HeaderLink to="/other/about">About Me</HeaderLink>
+      <HeaderLink to="/other/contact">Contact Me</HeaderLink>
       <HeaderLink to={"/" + getLink(props)}>I want to {props.buyOrSell === "buy" ? "sell" : "buy"}</HeaderLink>
     </Links>
   </HeaderDiv>
@@ -68,7 +72,7 @@ const Links = styled.div`
   text-align: center;
   width: 30vw;
   margin: 0 1rem;
-  max-width: 200px;
+  max-width: 320px;
 `
 const CurrentStatus = styled.label`
   font-family: ${headerFont};
